@@ -1,0 +1,53 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.col-xs-3 {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.col-xs-3:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.col-xs-3:active {
+    background-color: blue;
+}
+
+.col-xs-6 {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.col-xs-6:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.col-xs-6:active {
+    background-color: blue;
+}
+
+.col-xs-12 {
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 150px;
+}

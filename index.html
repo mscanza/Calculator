@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container-fluid" id="calculator">
+        <h1>SCANZA</h1>
+        <div class="row">
+            <div class="col-xs-12" placeholder="0" id="display"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3" id="clear">AC</div>
+            <div class="col-xs-3" id="negative"> +/- </div>
+            <div class="col-xs-3" id="percent"> % </div>
+            <div class="col-xs-3 operator" id="divide"> / </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 number" id="seven">7</div>
+            <div class="col-xs-3 number" id="eight">8</div>
+            <div class="col-xs-3 number" id="nine">9</div>
+            <div class="col-xs-3 operator" id="multiply"> * </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 number" id="four">4</div>
+            <div class="col-xs-3 number" id="five">5</div>
+            <div class="col-xs-3 number" id="six">6</div>
+            <div class="col-xs-3 operator" id="subtract"> - </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 number" id="one">1</div>
+            <div class="col-xs-3 number" id="two">2</div>
+            <div class="col-xs-3 number" id="three">3</div>
+            <div class="col-xs-3 operator" id="add"> + </div>
+        </div>    
+        <div class="row">
+            <div class="col-xs-6 number" id="zero">0</div>
+            <div class="col-xs-3" id="decimal">.</div>
+            <div class="col-xs-3" id="equals">=</div>
+        </div>
+    </div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
