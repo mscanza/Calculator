@@ -3,15 +3,15 @@ $(document).ready(function() {
 
 $('#display').html(0)
 $('.number').click(function() {
-    if ($('#display').html() == 0) {
+    if ($('#display').html() == 0 && !$('#display').html().includes(".")) {
         $('#display').html('')
     }
     let currentText = $('#display').text()
-    $('#display').html(currentText + $(this).text())
+    $('#display').html(currentText + Number($(this).html()))
 })
 
 $('#clear').click(function() {
-    equation = Number(0);
+   let equation = Number(0);
     $('#display').html(equation)
     
 })
@@ -19,12 +19,20 @@ $('#clear').click(function() {
 $('.operator').click(function() {
     let currentText = $('#display').text()
         $('#display').html(currentText + $(this).text())
-    
 })
 
 $('#equals').click(function() {
     let equation = $('#display').text()
-    let answer = eval(equation)
+    let split = equation.split(" ")
+    let filtered = split.filter(function(item) {
+        return item !== "";
+    })
+    for (var i = 0; i < filtered.length - 1; i++) {
+        
+    }
+    console.log(filtered)
+    filtered = filtered.join("")
+    let answer = eval(filtered)
     $('#display').html(answer)  
     console.log(answer)
 })
