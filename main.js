@@ -18,7 +18,16 @@ $('#clear').click(function() {
 
 $('.operator').click(function() {
     let currentText = $('#display').text()
-        $('#display').html(currentText + $(this).text())
+    let splitText = currentText.split(" ")
+    console.log(splitText);
+    let filtered = splitText.filter(function(item) {
+        return item !== "";
+    })
+    if (filtered[filtered.length - 1].match(/\*|\/|\+|\-/)) {
+        filtered.pop();
+    }
+   filtered = filtered.join(" ")
+        $('#display').html(filtered + $(this).text())
 })
 
 $('#equals').click(function() {
@@ -27,9 +36,6 @@ $('#equals').click(function() {
     let filtered = split.filter(function(item) {
         return item !== "";
     })
-    for (var i = 0; i < filtered.length - 1; i++) {
-        
-    }
     console.log(filtered)
     filtered = filtered.join("")
     let answer = eval(filtered)
