@@ -19,7 +19,8 @@ h1 {
     height: 150px;
 }
 .col-xs-3:hover {
-    background-color: lightgrey;
+    background-color: blue;
+    color: white;
     cursor: pointer;
 }
 
@@ -36,7 +37,8 @@ h1 {
 }
 
 .col-xs-6:hover {
-    background-color: lightgrey;
+    background-color: blue;
+    color: white;
     cursor: pointer;
 }
 
@@ -50,6 +52,14 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     height: 150px;
+}
+
+.top {
+    border-top: 2px solid black;
+}
+
+.bottom {
+    border-bottom: 2px solid black;
 }
 
 @media (max-width: 450px) {

@@ -61,8 +61,7 @@ $('#backspace').click(function() {
         split.pop();
         split = split.join(" ")
         $('#display').html(split);
-    }
-    
+    }   
 })
 
 $('#percent').click(function() {
