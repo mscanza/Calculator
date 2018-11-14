@@ -54,9 +54,15 @@ $('#decimal').click(function() {
 $('#backspace').click(function() {
     let currentText = $('#display').text();
     let split = currentText.split(' ');
-    split.pop();
-    split = split.join(" ")
-    $('#display').html(split);
+    console.log(split.length)
+    if (split.length === 1) {
+        $('#display').html(0)
+    } else {
+        split.pop();
+        split = split.join(" ")
+        $('#display').html(split);
+    }
+    
 })
 
 $('#percent').click(function() {
