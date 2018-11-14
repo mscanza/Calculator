@@ -19,7 +19,6 @@ $('#clear').click(function() {
 $('.operator').click(function() {
     let currentText = $('#display').text()
     let splitText = currentText.split(" ")
-    console.log(splitText);
     let filtered = splitText.filter(function(item) {
         return item !== "";
     })
@@ -36,11 +35,9 @@ $('#equals').click(function() {
     let filtered = split.filter(function(item) {
         return item !== "";
     })
-    console.log(filtered)
     filtered = filtered.join("")
     let answer = eval(filtered)
     $('#display').html(answer)  
-    console.log(answer)
 })
 
 $('#decimal').click(function() {
@@ -54,12 +51,20 @@ $('#decimal').click(function() {
 
 })
 
+$('#backspace').click(function() {
+    let currentText = $('#display').text();
+    let split = currentText.split(' ');
+    split.pop();
+    split = split.join(" ")
+    $('#display').html(split);
+})
 
-
-
-
-
-
-
+$('#percent').click(function() {
+    let currentText = $('#display').text();
+    let split = currentText.split(' ');
+    split[split.length - 1] /= 100;
+    split = split.join(" ")
+    $("#display").html(split)
+})
 
 })
