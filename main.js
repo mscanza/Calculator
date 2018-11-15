@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    $('.fade-in').css("display", "flex")
+    .hide()
+    .fadeIn();
 
 $('#display').html(0)
 $('.number').click(function() {
@@ -58,18 +61,20 @@ $('#backspace').click(function() {
     if (split.length === 1) {
         $('#display').html(0)
     } else {
-        split.pop();
+         split.pop();
         split = split.join(" ")
         $('#display').html(split);
     }   
 })
+
+
 
 $('#percent').click(function() {
     let currentText = $('#display').text();
     let split = currentText.split(' ');
     split[split.length - 1] /= 100;
     split = split.join(" ")
-    $("#display").html(split)
+    $("#display").html(split + " ")
 })
 
 })
