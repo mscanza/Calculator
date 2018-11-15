@@ -25,7 +25,7 @@ $('.operator').click(function() {
     let filtered = splitText.filter(function(item) {
         return item !== "";
     })
-    if (filtered[filtered.length - 1].match(/\*|\/|\+|\-/)) {
+    if (filtered[filtered.length - 1].match(/\*|\/|\+|\-/) && filtered[filtered.length - 1].length === 1) {
         filtered.pop();
     }
    filtered = filtered.join(" ")
@@ -68,13 +68,12 @@ $('#backspace').click(function() {
 })
 
 
-
 $('#percent').click(function() {
     let currentText = $('#display').text();
     let split = currentText.split(' ');
     split[split.length - 1] /= 100;
     split = split.join(" ")
-    $("#display").html(split + " ")
+    $("#display").html(split)
 })
 
 })
